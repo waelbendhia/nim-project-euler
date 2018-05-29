@@ -1,1 +1,1 @@
-Some Project Euler solutions writting in Nim
+Some Project Euler solutions written in Nim
