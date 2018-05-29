@@ -17,6 +17,5 @@ proc largestPrimeFactor(n: uint64): uint64 =
             return i
     return 0
 
-proc solve() = echo largestPrimeFactor 600851475143u
 
-timeIt solve
+timeIt proc () = echo largestPrimeFactor 600851475143u

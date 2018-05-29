@@ -1,0 +1,1 @@
+Some Project Euler solutions writting in Nim

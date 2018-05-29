@@ -38,6 +38,4 @@ proc solver(factors: seq[uint64]): uint64 =
 var ds: seq[uint64] = @[]
 for i in 2u64..20: ds.add i
 
-proc solve() = echo solver(ds)
-
-timeIt solve
+timeIt proc () = echo solver(ds)

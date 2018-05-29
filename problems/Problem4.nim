@@ -24,6 +24,4 @@ proc solver(digits: uint64): uint64 =
             if cur > result and isPalindrome cur:
                 result = cur
 
-proc solve() = echo solver(3u64)
-
-timeIt(solve)
+timeIt proc () = echo solver(3u64)

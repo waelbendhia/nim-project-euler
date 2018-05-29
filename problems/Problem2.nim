@@ -15,7 +15,4 @@ proc sumFibs(limit: uint64): uint64 =
         if (i1 and 1) == 0:
             result += i1
 
-proc solution(): void =
-    echo "Result: ", sumFibs(4000000)
-
-timeIt(solution)
+timeIt proc () = echo sumFibs(4000000)
