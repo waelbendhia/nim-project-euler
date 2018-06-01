@@ -6,4 +6,4 @@ proc solver(n: uint64): uint64 =
         if p > n: break
         result += p
 
-timeIt proc () = echo solver 2000000u64
+timeIt proc = echo solver 2000000u64

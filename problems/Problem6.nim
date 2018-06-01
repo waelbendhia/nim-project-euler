@@ -8,4 +8,4 @@ proc solver(limit: uint64): uint64 =
         squareSum += i^2
     return sumSquare^2 - squareSum
 
-timeIt proc () = echo solver 100
+timeIt proc = echo solver 100

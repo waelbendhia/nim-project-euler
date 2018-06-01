@@ -9,8 +9,8 @@ proc isPalindrome(n: uint64): bool =
         digits.add(x mod 10)
         x = x div 10
     digits.add(x)
-    for i in 0..digits.len() div 2:
-        if digits[i] != digits[digits.len() - 1 - i]:
+    for i in 0..digits.len div 2:
+        if digits[i] != digits[digits.len - 1 - i]:
             return false
     return true
 
@@ -24,4 +24,4 @@ proc solver(digits: uint64): uint64 =
             if cur > result and isPalindrome cur:
                 result = cur
 
-timeIt proc () = echo solver(3u64)
+timeIt proc = echo solver 3u64

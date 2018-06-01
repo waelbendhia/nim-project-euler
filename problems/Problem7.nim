@@ -7,4 +7,4 @@ proc solver(n: uint): uint64 =
         inc i
         if i == n: return p
 
-timeIt proc () = echo solver 10001
+timeIt proc = echo solver 10001

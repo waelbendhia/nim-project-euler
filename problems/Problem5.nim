@@ -8,8 +8,9 @@ proc joinFactors(
     f2s: OrderedTable[uint64, uint64],
 ): OrderedTable[uint64, uint64] =
     result = initOrderedTable[uint64, uint64]()
-    for p, exp in f1s.pairs(): result.add p, exp
-    for p, exp in f2s.pairs():
+    for p, exp in f1s.pairs:
+        result.add p, exp
+    for p, exp in f2s.pairs:
         if result.contains p:
             result[p] = if result[p] > exp: result[p] else: exp
         else:
@@ -30,12 +31,12 @@ proc primeFactors(n: uint64): OrderedTable[uint64, uint64] =
 proc solver(factors: seq[uint64]): uint64 =
     var fs = initOrderedTable[uint64, uint64]()
     result = 1u64
-    for i in factors.items():
-        fs = joinFactors(fs, primeFactors i)
-    for p, exp in fs.pairs():
+    for i in factors.items:
+        fs = fs.joinFactors i.primeFactors
+    for p, exp in fs.pairs:
         result *= p^exp
 
 var ds: seq[uint64] = @[]
 for i in 2u64..20: ds.add i
 
-timeIt proc () = echo solver(ds)
+timeIt proc = echo solver ds

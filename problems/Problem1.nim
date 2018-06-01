@@ -5,6 +5,6 @@ proc multiplesUnder(n, limit: uint64): uint64 =
     return (terms * (n + terms * n)) div 2
 
 timeIt proc () =
-    echo multiplesUnder(3, 1000) +
-         multiplesUnder(5, 1000) -
-         multiplesUnder(15, 1000)
+    echo 3.multiplesUnder(1000) +
+         5.multiplesUnder(1000) -
+         15.multiplesUnder(1000)

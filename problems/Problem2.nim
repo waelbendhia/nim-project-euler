@@ -15,4 +15,4 @@ proc sumFibs(limit: uint64): uint64 =
         if (i1 and 1) == 0:
             result += i1
 
-timeIt proc () = echo sumFibs(4000000)
+timeIt proc = echo 4000000.sumFibs

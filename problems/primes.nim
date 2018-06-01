@@ -18,7 +18,8 @@ iterator primes*(): uint64 =
 
 proc createPrimeChecker*(limit: uint64): proc(_: uint64): bool =
     var lookup: seq[bool] = @[]
-    for i in 0..(limit div 2 - 1): lookup.add true
+    for i in 0..limit div 2 - 1:
+        lookup.add true
     var i = 3u64
     while i*i < limit:
         if lookup[int((i div 2) - 1)]:

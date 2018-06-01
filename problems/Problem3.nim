@@ -12,10 +12,9 @@ proc isPrime(n: uint64): bool =
     return true
 
 proc largestPrimeFactor(n: uint64): uint64 =
-    for i in countdown(uint64(sqrt float(n)), uint64(2)):
+    for i in countdown(uint64(sqrt float n), uint64 2):
         if n mod i == 0 and isPrime i:
             return i
     return 0
 
-
-timeIt proc () = echo largestPrimeFactor 600851475143u
+timeIt proc = echo largestPrimeFactor 600851475143u
