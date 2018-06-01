@@ -10,8 +10,7 @@ proc collatzLengthsUnder(n: int): seq[int] =
         if collatz[i] == -1:
             collatz[i] = 1 + getCollatz nextVal
         return collatz[i]
-    for i in 0..n:
-        let _ = getCollatz(i)
+    for i in 0..n: discard getCollatz(i)
     return collatz
 
 proc solve(limit: int): int =

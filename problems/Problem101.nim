@@ -17,7 +17,7 @@ proc lagrangeFIT[I, T](degree: int, vals: array[I,T]): T =
         for xj in 1..degree:
             if xj == xi: continue
             numerator *= degree + 1 - xj
-            denumerator *= xi-xj
+            denumerator *= xi - xj
         result += (numerator*vals[xi]) div denumerator
 
 proc sumFITS[I,T](poly: array[I,T]): T =

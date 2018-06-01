@@ -9,4 +9,4 @@ proc sumDigits(n: Int): Int =
     if n < 10: return n
     return n mod newInt(10) + sumDigits(n div 10)
 
-timeIt proc() = echo sumDigits factorial 100
+timeIt proc = echo sumDigits factorial 100
